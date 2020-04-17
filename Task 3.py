@@ -30,18 +30,12 @@ def doc_all():
 
 
 def new_doc_name():
-    # try:
-    #     for i in documents:                                           для проверки исключения KeyError
-    #         del i['name']
-    #         print(i['name'])
-    # except KeyError:
-    #     print("Отсутствует поле имени документа")
-    try:
-        for j in documents:
-            z = list(j.values())
-            print(f'{z[2]}')
-    except KeyError:
-        print("Отсутствует поле имени документа")
+    for i in documents:
+        try:
+            print(i['name'])
+        except KeyError:
+            print("Отсутствует поле имени документа")
+
 
 def doc_direct():
     director = list(directories)
